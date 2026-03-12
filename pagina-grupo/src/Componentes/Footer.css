@@ -1,0 +1,229 @@
+/* Footer.css - Footer principal de starbucks.com.co (fondo verde oscuro) */
+
+.footer {
+  background: #1e3932;
+  color: #fff;
+  font-family: 'SoDo Sans', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── PARTE SUPERIOR: Logo + Columnas ── */
+.footer__top {
+  padding: 48px 0 40px;
+}
+.footer__top > .footer__container {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+.footer__logo-wrap {
+  flex-shrink: 0;
+}
+.footer__logo {
+  width: 51px;
+  height: 51px;
+  object-fit: contain;
+}
+.footer__cols {
+  display: flex;
+  gap: 64px;
+  flex: 1;
+}
+.footer__col {
+  min-width: 160px;
+}
+.footer__col-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__arrow {
+  display: none;
+  font-size: 22px;
+  font-weight: 300;
+  transition: transform 0.3s;
+}
+.footer__arrow--open {
+  transform: rotate(45deg);
+}
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__links li {
+  margin-bottom: 12px;
+}
+.footer__links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.footer__links a:hover {
+  color: #fff;
+}
+.footer__link--underline {
+  text-decoration: underline !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* ── LINKS LEGALES ── */
+.footer__legal {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 24px 0;
+}
+.footer__legal-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__legal-list a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.footer__legal-list a:hover {
+  color: #fff;
+}
+
+/* ── REDES SOCIALES ── */
+.footer__social {
+  padding: 16px 0;
+}
+.footer__social-icons {
+  display: flex;
+  gap: 12px;
+}
+.footer__social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.footer__social-icons a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ── APP SECTION ── */
+.footer__app {
+  padding: 24px 0;
+}
+.footer__app-box {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 520px;
+}
+.footer__app-text h3 {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  color: #fff;
+  line-height: 1.4;
+}
+.footer__app-text p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+.footer__app-badges {
+  display: flex;
+  gap: 12px;
+}
+.footer__badge {
+  height: 40px;
+  width: auto;
+}
+
+/* ── COPYRIGHT ── */
+.footer__bottom {
+  padding: 24px 0 16px;
+}
+.footer__copy {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* ── SIC ── */
+.footer__sic-section {
+  padding: 0 0 40px;
+}
+.footer__sic {
+  display: inline-block;
+}
+.footer__sic img {
+  height: 70px;
+  width: auto;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .footer__container {
+    padding: 0 24px;
+  }
+  .footer__top > .footer__container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .footer__cols {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer__col {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer__col-title {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .footer__arrow {
+    display: block;
+  }
+  .footer__links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+  .footer__links--show {
+    max-height: 400px;
+    padding-top: 16px;
+  }
+  .footer__legal-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .footer__app-box {
+    max-width: 100%;
+  }
+}
+
