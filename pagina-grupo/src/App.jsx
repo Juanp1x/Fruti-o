@@ -1,13 +1,6 @@
-import Hero from "./Componentes/Hero";
+import CartaStarbucks from "./Componentes/CARTA"
 
-function App() {
-
-  return (
-    <>
-      <Hero/>
-    </>
-  );
-
+function app() {
+    return <CartaStarbucks/>;
 }
-
-export default App;
+export default app
