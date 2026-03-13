@@ -1,0 +1,344 @@
+
+
+/* ===========================
+   BUTTONS
+   =========================== */
+
+.btn {
+  border-radius: 20px;
+  padding: 9px 22px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: inline-block;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn--white {
+  background: white;
+  color: #1e3932;
+  border: none;
+  font-weight: 700;
+}
+
+.btn--outline-white {
+  background: transparent;
+  color: white;
+  border: 1.5px solid white;
+}
+
+.btn--outline-dark {
+  background: transparent;
+  color: #1e3932;
+  border: 1.5px solid #1e3932;
+}
+
+/* ===========================
+   LAYOUT PRINCIPAL
+   =========================== */
+
+.page {
+  min-height: 100vh;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.layout__left {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.layout__right {
+  background: linear-gradient(135deg, #1a5c3a 0%, #2d8a56 35%, #1e3932 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 48px 80px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===========================
+   HERO IZQUIERDO
+   =========================== */
+
+.hero__left {
+  background: #006241;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__title {
+  color: white;
+  font-size: 28px;
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.hero__title--accent {
+  color: #cba135;
+}
+
+.hero__subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.hero__cta-group {
+  display: flex;
+  gap: 12px;
+}
+
+/* ===========================
+   HERO DERECHO
+   =========================== */
+
+.hero__star {
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero__star--top-left {
+  top: 36px;
+  left: 48px;
+}
+
+.hero__star--bottom-right {
+  bottom: 60px;
+  right: 60px;
+}
+
+.hero__star--mid-right {
+  top: 55%;
+  right: 32px;
+}
+
+.hero__brand {
+  text-align: center;
+  margin-bottom: 8px;
+  z-index: 1;
+}
+
+.hero__brand-name {
+  color: white;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero__brand-sub {
+  color: white;
+  font-size: 13px;
+  letter-spacing: 6px;
+  opacity: 0.85;
+}
+
+.hero__headline {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero__headline-banner {
+  background: #cba135;
+  display: inline-block;
+  padding: 6px 24px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+}
+
+.hero__headline-banner span {
+  color: white;
+  font-size: 26px;
+  font-family: "Georgia", serif;
+  font-weight: 900;
+}
+
+.hero__headline-main {
+  color: white;
+  font-size: 72px;
+  font-family: "Georgia", serif;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  display: block;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero__headline-tagline {
+  margin-top: 12px;
+}
+
+.hero__headline-tagline span {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  display: block;
+}
+
+.hero__cup {
+  position: absolute;
+  bottom: -10px;
+  right: 40px;
+  z-index: 0;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* ===========================
+   BENEFITS
+   =========================== */
+
+.benefits {
+  padding: 40px 40px;
+}
+
+.benefits__intro {
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.benefit-item:last-child {
+  border-bottom: none;
+}
+
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.icon-circle--green-light {
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+}
+
+.icon-circle--dark-green {
+  background: #1e3932;
+  border: 2px solid #4caf50;
+}
+
+.icon-circle--gold {
+  background: #cba135;
+  border: 2px solid #a8892c;
+}
+
+.icon-circle--gold span {
+  font-size: 11px;
+  font-weight: 900;
+  color: #1e3932;
+  letter-spacing: 0.5px;
+}
+
+.icon-circle--purple {
+  background: #f3eeff;
+  border: 2px solid #c0a0e0;
+}
+
+.benefit-item__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e3932;
+  margin-bottom: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.benefit-item__desc {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   FAQ
+   =========================== */
+
+.faq {
+  padding: 40px 40px 40px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.faq__title {
+  font-size: 22px;
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  color: #1e3932;
+  margin-bottom: 8px;
+}
+
+.faq__desc {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   TÉRMINOS Y CONDICIONES
+   =========================== */
+
+.terms {
+  padding: 40px 40px 56px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.terms__title {
+  font-size: 22px;
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.terms__desc {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-family: Arial, sans-serif;
+}
