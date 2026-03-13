@@ -1,0 +1,142 @@
+/* ── Layout principal ─────────────────────────────────── */
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #f2f0eb;
+}
+
+/* ── Panel izquierdo (foto fija) ──────────────────────── */
+#left-panel {
+  width: 370px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#left-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Contenido derecho ────────────────────────────────── */
+#right-content {
+  flex: 1;
+  background: #f7f5f2;
+  padding: 56px 68px 80px 72px;
+}
+
+/* ── Título principal ─────────────────────────────────── */
+#page-title {
+  margin: 0 0 28px 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.1px;
+}
+
+/* ── Imagen hero ──────────────────────────────────────── */
+#hero-image-wrapper {
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  max-width: 670px;
+}
+
+#hero-image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+/* ── Sección ingredientes ─────────────────────────────── */
+#ingredients-title {
+  margin: 0 0 12px 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+#ingredients-list {
+  margin: 0 0 12px 0;
+  padding: 0;
+  list-style: none;
+}
+
+#ingredients-list li {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.65;
+}
+
+#intro-text {
+  margin: 0 0 44px 0;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.75;
+  max-width: 600px;
+}
+
+/* ── Grid de pasos — responsive 1 → 2 columnas ────── */
+#steps-grid {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  #steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  #steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Tarjeta de paso ──────────────────────────────────── */
+.step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-image-wrapper {
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ddd5c8;
+  max-height: 280px;
+}
+
+.step-image-wrapper img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.step-title {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.step-description {
+  margin: 0;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.7;
+}
+
+#hero-image-wrapper {
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 auto 28px auto;
+  max-width: 670px;
+}
