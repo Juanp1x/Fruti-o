@@ -1,12 +1,12 @@
 .menu-principal {
   width: 100%;
   background: #f2f0eb;
-  padding: 24px 0;
 }
 
+/* BANNER */
 .banner {
   width: 70%;
-  margin: 0 auto;
+  margin: 24px auto;
   display: flex;
   border-radius: 12px;
   overflow: hidden;
@@ -22,6 +22,7 @@
   justify-content: center;
   gap: 24px;
   width: 40%;
+  flex-shrink: 0;
 }
 
 .banner-left h2 {
@@ -50,10 +51,15 @@
 .banner-right {
   position: relative;
   width: 60%;
-  min-height: 300px;
-  background-image: url("https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .banner-imagen-container {
@@ -85,6 +91,229 @@
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+/* REWARDS */
+.rewards-section {
+  padding: 60px 15%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.rewards-titulo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1e1e1e;
+}
+
+.rewards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.reward-item {
+  max-width: 250px;
+  text-align: left;
+}
+
+.reward-icono {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.reward-item h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1e1e1e;
+}
+
+.reward-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+.rewards-botones {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* BOTONES */
+.btn-verde {
+  background: #00704a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-verde:hover {
+  background: #1e3932;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #1e1e1e;
+  border: 1.5px solid #1e1e1e;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: #00704a;
+  color: #00704a;
+}
+
+/* CARDS GRID */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 24px 15%;
+  background: #f2f0eb;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-imagen {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-contenido {
+  padding: 20px;
+}
+
+.card-contenido h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1e1e1e;
+}
+
+.card-contenido p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.btn-card {
+  background: transparent;
+  color: #00704a;
+  border: 1.5px solid #00704a;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-card:hover {
+  background: #00704a;
+  color: white;
+}
+
+/* HISTORIAS */
+.historias {
+  display: flex;
+  width: 40%;
+  margin: 24px 15%;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.historias-imagen {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.historias-contenido {
+  padding: 20px;
+}
+
+.historias-contenido h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1e1e1e;
+}
+
+/* BUSCAR TIENDA */
+.buscar-tienda {
+  display: flex;
+  margin: 24px 15%;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.tienda-left {
+  background: #1e3932;
+  color: white;
+  padding: 40px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tienda-left h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.tienda-left p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.btn-outline-dark {
+  background: #ffffff;
+  color: #1e3932;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.2s;
+}
+
+.btn-outline-dark:hover {
+  background: #d4e9e2;
+}
+
+.tienda-mapa {
+  width: 65%;
+  min-height: 300px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
@@ -96,17 +325,41 @@
     padding: 32px 24px;
   }
 
-  .banner-left h2 {
-    font-size: 24px;
-  }
-
   .banner-right {
     width: 100%;
     min-height: 220px;
   }
 
-  .etiqueta {
-    font-size: 9px;
-    padding: 4px 8px;
+  .rewards-section {
+    padding: 40px 5%;
+  }
+
+  .rewards-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    padding: 16px 5%;
+  }
+
+  .historias {
+    width: 90%;
+    margin: 16px auto;
+  }
+
+  .buscar-tienda {
+    flex-direction: column;
+    margin: 16px 5%;
+  }
+
+  .tienda-left {
+    width: 100%;
+  }
+
+  .tienda-mapa {
+    width: 100%;
+    min-height: 250px;
   }
 }
