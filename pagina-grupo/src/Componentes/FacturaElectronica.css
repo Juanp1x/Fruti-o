@@ -1,0 +1,243 @@
+/* ============================================================
+   STARBUCKS COLOMBIA — Factura Electrónica
+   Autor: Juan Blanco
+   ============================================================ */
+
+:root {
+  --sb-green: #00704A;
+  --sb-dark: #1E3932;
+  --sb-border: #d0d0d0;
+  --sb-text: #1a1a1a;
+  --sb-input-radius: 4px;
+  --font-main: 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { background: #ffffff; }
+
+/* ── SECCIÓN ────────────────────────────────────────────────── */
+#factura-electronica {
+  font-family: var(--font-main);
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.fe-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   COLUMNA IZQUIERDA
+   ══════════════════════════════════════════════════════════════ */
+.fe-left {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.fe-wave-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ── Header: logo + STARBUCKS® ──────────────────────────────── */
+.fe-left-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 32px 12px;
+}
+
+.fe-logo-img {
+  height: 64px;
+  object-fit: contain;
+}
+
+.fe-brand-name {
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: var(--font-main);
+}
+
+.fe-brand-name sup {
+  font-size: 14px;
+  vertical-align: super;
+}
+
+/* ── Tarjeta formulario ─────────────────────────────────────── */
+.fe-form-card {
+  position: relative;
+  z-index: 2;
+  background: white;
+  border-radius: 16px;
+  margin: 0 28px 36px;
+  padding: 26px 24px 20px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.13);
+}
+
+.fe-form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fe-form-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--sb-green);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+.fe-form-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sb-green);
+}
+
+/* ── Campos ─────────────────────────────────────────────────── */
+.fe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.fe-input,
+.fe-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--sb-border);
+  border-radius: var(--sb-input-radius);
+  font-size: 13px;
+  color: var(--sb-text);
+  font-family: var(--font-main);
+  background: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.fe-input:focus,
+.fe-select:focus {
+  border-color: var(--sb-green);
+  box-shadow: 0 0 0 2px rgba(0,112,74,0.1);
+}
+
+.fe-input::placeholder { color: #b0b0b0; }
+.fe-select             { color: #777; cursor: pointer; }
+.fe-input[type="date"] { color: var(--sb-text); }
+
+/* Botón buscar */
+.fe-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.fe-btn-buscar {
+  background: var(--sb-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 30px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-main);
+  transition: background 0.2s;
+}
+
+.fe-btn-buscar:hover { background: #005a3c; }
+
+/* Mensaje éxito */
+.fe-success-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0faf5;
+  border: 1px solid #b2dfcc;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--sb-dark);
+  font-weight: 600;
+  animation: feFadeIn 0.3s ease;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   COLUMNA DERECHA
+   ══════════════════════════════════════════════════════════════ */
+.fe-right {
+  width: 50%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px 40px;
+  gap: 28px;
+}
+
+/* ── Ícono + título en fila ─────────────────────────────────── */
+.fe-right-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.fe-conoce-img {
+  height: 64px;
+  object-fit: contain;
+}
+
+.fe-conoce-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--sb-green);
+  font-family: var(--font-main);
+}
+
+/* ── Tarjeta blanca con imagen de factura ───────────────────── */
+.fe-factura-card {
+  display: block;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  max-width: 420px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fe-factura-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+.fe-factura-img {
+  width: 100%;
+  display: block;
+}
+
+/* ── Animación ──────────────────────────────────────────────── */
+@keyframes feFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .fe-layout { flex-direction: column; }
+  .fe-left, .fe-right { width: 100%; }
+  .fe-right { padding: 32px 24px; }
+}

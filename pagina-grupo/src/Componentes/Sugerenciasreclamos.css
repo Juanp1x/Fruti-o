@@ -1,0 +1,351 @@
+/* ============================================================
+   STARBUCKS COLOMBIA — Sugerencias y Reclamos
+   Autor: Juan Blanco
+   ============================================================ */
+
+:root {
+  --sb-green: #00704A;
+  --sb-dark: #1E3932;
+  --sb-white: #ffffff;
+  --sb-text: #1a1a1a;
+  --sb-border: #d0d0d0;
+  --sb-input-radius: 4px;
+  --font-main: 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #ffffff;
+}
+
+/* ── SECCIÓN PRINCIPAL ──────────────────────────────────────── */
+#atencion-cliente {
+  font-family: var(--font-main);
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* ── LAYOUT DOS COLUMNAS ────────────────────────────────────── */
+.ac-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   COLUMNA IZQUIERDA — fondo con ola #00704A
+   ══════════════════════════════════════════════════════════════ */
+.ac-left {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Ola orgánica — cubre el fondo */
+.ac-wave-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Header: solo el logo */
+.ac-left-header {
+  position: relative;
+  z-index: 2;
+  padding: 24px 32px 12px;
+}
+
+.ac-logo-img {
+  height: 68px;
+  object-fit: contain;
+}
+
+/* Tarjeta formulario */
+.ac-form-card {
+  position: relative;
+  z-index: 2;
+  background: white;
+  border-radius: 16px;
+  margin: 0 28px 36px;
+  padding: 24px 24px 18px;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.13);
+}
+
+/* ── Encabezado formulario ──────────────────────────────────── */
+.ac-form-heading {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.ac-form-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--sb-green);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+.ac-form-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sb-green);
+}
+
+/* ── Campos ─────────────────────────────────────────────────── */
+.ac-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ac-form-row {
+  display: flex;
+  gap: 9px;
+}
+
+.ac-form-row .ac-input,
+.ac-form-row .ac-select {
+  flex: 1;
+}
+
+.ac-input,
+.ac-select,
+.ac-textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--sb-border);
+  border-radius: var(--sb-input-radius);
+  font-size: 13px;
+  color: var(--sb-text);
+  font-family: var(--font-main);
+  background: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.ac-input:focus,
+.ac-select:focus,
+.ac-textarea:focus {
+  border-color: var(--sb-green);
+}
+
+.ac-input::placeholder,
+.ac-textarea::placeholder {
+  color: #b0b0b0;
+}
+
+.ac-select {
+  color: #777;
+}
+
+.ac-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Fila documento + ? */
+.ac-doc-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ac-doc-row .ac-input {
+  flex: 1;
+}
+
+.ac-help-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--sb-green);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* Botón cargar archivos */
+.ac-btn-upload {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sb-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-main);
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+
+.ac-btn-upload:hover {
+  background: #2d5a4e;
+}
+
+/* Botón enviar */
+.ac-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.ac-btn-submit {
+  background: var(--sb-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-main);
+  transition: background 0.2s;
+}
+
+.ac-btn-submit:hover {
+  background: #2d5a4e;
+}
+
+/* Mensaje éxito formulario */
+.ac-success-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0faf5;
+  border: 1px solid #b2dfcc;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--sb-dark);
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   COLUMNA DERECHA — fondo gris claro
+   ══════════════════════════════════════════════════════════════ */
+.ac-right {
+  width: 50%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px 40px;
+}
+
+/* Imagen grande que ya incluye el título "Estado del Servicio" */
+.ac-status-header {
+  margin-bottom: 28px;
+}
+
+.ac-status-icon-img {
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Tarjeta consulta */
+.ac-status-card {
+  background: var(--sb-green);
+  border-radius: 12px;
+  padding: 26px 26px 22px;
+  max-width: 500px;
+}
+
+.ac-status-label {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.ac-status-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #ccc;
+  border-radius: var(--sb-input-radius);
+  font-size: 14px;
+  color: var(--sb-text);
+  font-family: var(--font-main);
+  background: white;
+  outline: none;
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+}
+
+.ac-status-input::placeholder {
+  color: #b0b0b0;
+}
+
+.ac-status-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ac-btn-consultar {
+  background: white;
+  color: var(--sb-dark);
+  border: 1.5px solid white;
+  border-radius: 4px;
+  padding: 9px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-main);
+  transition: background 0.2s, color 0.2s;
+}
+
+.ac-btn-consultar:hover {
+  background: var(--sb-dark);
+  color: white;
+  border-color: var(--sb-dark);
+}
+
+.ac-query-result {
+  margin-top: 14px;
+  background: white;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--sb-dark);
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ── Animación ──────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .ac-layout {
+    flex-direction: column;
+  }
+  .ac-left,
+  .ac-right {
+    width: 100%;
+  }
+  .ac-right {
+    padding: 32px 24px;
+  }
+}
