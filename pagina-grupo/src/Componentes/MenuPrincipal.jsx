@@ -79,8 +79,7 @@ function MenuPrincipal() {
   ];
 
   function handleBuscarTienda() {
-    var seccion = document.querySelector("#buscar-tienda");
-    if (seccion) seccion.scrollIntoView({ behavior: "smooth" });
+    window.location.href = "/buscar-tienda";
   }
 
   return (
